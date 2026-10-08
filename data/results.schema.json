@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/results.schema.json",
+  "$id": "https://mariomarcolongo.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/results.schema.json",
   "title": "QCAE result export",
   "type": "object",
   "required": [

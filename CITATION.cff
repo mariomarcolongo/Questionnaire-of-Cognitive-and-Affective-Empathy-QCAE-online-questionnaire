@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: Marcolongo
     given-names: Mario
-repository-code: "https://github.com/jnton/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire"
-url: "https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/"
+repository-code: "https://github.com/mariomarcolongo/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire"
+url: "https://mariomarcolongo.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/"
 license: AGPL-3.0-only
 version: 1.2.0
 date-released: 2026-07-22
