@@ -4,7 +4,7 @@
   "version": "1.1.1",
   "updated": "2026-07-22",
   "description": "Versioned discovery manifest for human, software, and AI-agent use of QCAE Online.",
-  "baseUrl": "https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/",
+  "baseUrl": "https://mariomarcolongo.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/",
   "operations": [
     {
       "id": "retrieve-base-instrument",
