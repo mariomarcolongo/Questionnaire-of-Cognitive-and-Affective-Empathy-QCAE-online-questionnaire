@@ -47,6 +47,8 @@ node bin/qcae-score.mjs examples/responses.en.synthetic.json
 
 ## Enabled versions
 
+See the [localization guide and glossary](docs/LOCALIZATION.md) for terminology across all eight locales, translation scope, and source-wording safeguards.
+
 - Original English: 31 items.
 - Serbian Latin: 31 items.
 - French: 31 items.

@@ -21,7 +21,7 @@ const els = {
 
 function showFatalError() {
   if (!els.app) return;
-  const message = "The questionnaire data could not be loaded. Please reload the page.";
+  const message = state.uiAll ? t("errorLoading") : "The questionnaire data could not be loaded. Please reload the page.";
   const status = els.status ?? h("p", { id: "status" });
   status.textContent = message;
   status.className = "fatal-error";
@@ -59,6 +59,12 @@ function itemText(item) {
 function setDocumentLanguage() {
   document.documentElement.lang = state.locale;
   document.title = `${t("appTitle")} — QCAE`;
+  for (const element of document.querySelectorAll("[data-i18n]")) {
+    element.textContent = t(element.dataset.i18n);
+  }
+  for (const element of document.querySelectorAll("[data-i18n-aria-label]")) {
+    element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel));
+  }
 }
 
 function setLanguageOptions() {
@@ -152,7 +158,7 @@ function sourceDetails() {
     h("p", { class: "resource-links" },
       h("a", { href: "./references.html" }, t("referencesLabel")),
       " · ",
-      h("a", { href: "./data/qcae.v1.json", type: "application/json" }, "Instrument JSON"),
+      h("a", { href: "./data/qcae.v1.json", type: "application/json" }, t("instrumentJsonLabel")),
       " · ",
       h("a", { href: "./agents.html" }, t("agentsLabel")),
       " · ",
