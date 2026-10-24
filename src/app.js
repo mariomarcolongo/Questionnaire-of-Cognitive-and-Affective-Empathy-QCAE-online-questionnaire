@@ -182,7 +182,7 @@ function renderQuestion() {
   const form = h("form", { id: "qcae-question-form", class: "question-card", "data-qcae-item-id": item.id, "data-qcae-locale": state.locale });
   const fieldset = h("fieldset", {});
   fieldset.append(
-    h("legend", {},
+    h("legend", { tabindex: -1 },
       h("span", { class: "question-number" }, `${t("question")} ${state.index + 1} ${t("of")} ${items.length}`),
       h("span", { class: "question-text" }, itemText(item))
     )
@@ -220,7 +220,7 @@ function renderQuestion() {
     if (state.index < items.length - 1) {
       state.index += 1;
       render();
-      document.querySelector("legend")?.focus?.();
+      document.querySelector("#qcae-question-form legend")?.focus();
     } else {
       state.result = scoreQcae(state.instrument, state.locale, state.responses);
       state.completedAt = new Date().toISOString();
