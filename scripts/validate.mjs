@@ -26,6 +26,16 @@ assert.equal(referenceIds.size, references.references.length, "Duplicate referen
 const requiredUiKeys = Object.keys(ui.en).sort();
 for (const locale of locales) {
   assert(ui[locale], `Missing UI locale ${locale}`);
+  // Check authored dictionaries before English fallback can conceal missing translations.
+  const authoredUi = { ...(baseUi[locale] ?? {}), ...(uiPacks.locales?.[locale] ?? {}) };
+  assert.deepEqual(Object.keys(authoredUi).sort(), requiredUiKeys, `Incomplete authored UI for ${locale}`);
+  const optionalWarnings = new Set(["provisionalWarning", "portugueseWarning", "turkishFactorWarning"]);
+  for (const [key, value] of Object.entries(authoredUi)) {
+    assert.equal(typeof value, "string", `Invalid UI string ${locale}.${key}`);
+    if (!optionalWarnings.has(key) || instrument.variants[locale].noticeKey === key) {
+      assert(value.trim(), `Empty UI string ${locale}.${key}`);
+    }
+  }
   assert.deepEqual(Object.keys(ui[locale]).sort(), requiredUiKeys, `UI key mismatch for ${locale}`);
   assert.equal(ui[locale].rightsTitle.length > 0, true, `Missing source title for ${locale}`);
   assert.equal(ui[locale].rightsBody.length > 0, true, `Missing source body for ${locale}`);
