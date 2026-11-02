@@ -24,6 +24,23 @@ test("agent and reference documents expose stable machine-readable paths", async
   assert.match(llms, /rights\.html/);
 });
 
+test("citation metadata cites this software and credits the original publication", async () => {
+  const citation = await read("../CITATION.cff");
+  const { version } = JSON.parse(await read("../package.json"));
+  // preferred-citation would make GitHub's "Cite this repository" panel show the paper instead.
+  assert.doesNotMatch(citation, /^preferred-citation:/m);
+  assert.match(citation, new RegExp(`^version: ${version}$`, "m"));
+  for (const source of [citation, await read("../README.md")]) {
+    assert.match(source, /10\.1080\/00223891\.2010\.528484/);
+  }
+});
+
+test("homepage cites the QCAE paper without presenting itself as the paper", async () => {
+  const index = await read("../index.html");
+  assert.doesNotMatch(index, /<meta name="citation_/);
+  assert.match(index, /"citation": \{\s*"@type": "ScholarlyArticle"/);
+});
+
 test("static deployment documents no response collection or donation workflow", async () => {
   const files = [
     "../README.md", "../AGENTS.md", "../llms.txt", "../llms-full.txt", "../agents.html",

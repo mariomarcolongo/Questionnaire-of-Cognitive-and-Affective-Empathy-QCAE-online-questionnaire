@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- Made GitHub's "Cite this repository" panel cite this software; the original QCAE publication moved from `preferred-citation` to `references` and is now credited in the README.
+- Corrected reference records against Crossref, DataCite, PubMed, OSF, and REPOPSI: Adriana Sampaio's name, the full Brunet-Gouet et al. author list, the Bukowski et al. and Kim record titles, and the Di Girolamo et al. record in the base registry.
+- Credited the Serbian translation to Danka Purić and Nemanja Kidžin, confirmed its CC BY-NC-SA 4.0 licence, and added the original QCAE publication to its sources as REPOPSI requires.
+- Restored volume, issue, pages, and article numbers on the References page and replaced its "Open source record" link label.
+- Removed homepage `citation_*` tags that described the page as the QCAE paper.
+
 ## 1.1.0 - 2026-07-22
 
 - Linked every enabled language to its validation paper or source record.

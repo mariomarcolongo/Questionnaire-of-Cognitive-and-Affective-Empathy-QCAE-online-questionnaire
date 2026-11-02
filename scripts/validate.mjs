@@ -13,6 +13,7 @@ for (const [locale, values] of Object.entries(uiPacks.locales ?? {})) {
   ui[locale] = { ...baseUi.en, ...(baseUi[locale] ?? {}), ...values };
 }
 const references = await loadReferenceRegistry();
+const baseReferences = await readJson("../data/references.v1.json");
 const referenceIds = new Set(references.references.map((reference) => reference.id));
 const locales = Object.keys(instrument.variants);
 const itemById = new Map(instrument.items.map((item) => [item.id, item]));
@@ -22,6 +23,11 @@ assert.deepEqual(instrument.items.map((item) => item.id), Array.from({ length: 3
 assert.deepEqual(instrument.reverseScoredItems, [1, 2, 17, 29]);
 assert.deepEqual(compact, baseInstrument, "Compact and readable base instrument files differ");
 assert.equal(referenceIds.size, references.references.length, "Duplicate reference IDs");
+for (const reference of [...baseReferences.references, ...references.references]) {
+  assert(!reference.authors?.includes("et al."), `Truncated author list for ${reference.id}`);
+  if (reference.doi) assert.equal(reference.url, `https://doi.org/${reference.doi}`, `DOI and URL differ for ${reference.id}`);
+  if (reference.journal) assert(reference.volume && (reference.pages || reference.article), `Incomplete journal citation for ${reference.id}`);
+}
 
 const requiredUiKeys = Object.keys(ui.en).sort();
 for (const locale of locales) {

@@ -53,7 +53,7 @@ export function applyReferencePacks(registry, packs) {
   }
   const remove = new Set(packs?.removeCandidateLocales ?? []);
   merged.integrationCandidates = merged.integrationCandidates.filter((candidate) => !remove.has(candidate.locale));
-  merged.version = "1.1.0";
+  merged.version = "1.1.1";
   merged.referencePacks = {
     id: packs?.id ?? null,
     version: packs?.version ?? null,
