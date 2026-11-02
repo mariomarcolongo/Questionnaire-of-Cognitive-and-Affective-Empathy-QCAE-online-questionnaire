@@ -1,3 +1,4 @@
+import { formatCitation } from "./citation.js";
 import { loadReferenceRegistry } from "./qcae-api.js";
 
 const target = document.querySelector("#reference-content");
@@ -23,9 +24,8 @@ function h(tag, attributes = {}, ...children) {
 }
 
 function referenceCard(reference) {
-  const citation = `${reference.authors?.join(", ") ?? ""} (${reference.year}). ${reference.title}. ${reference.journal ?? reference.repository ?? reference.publisher ?? ""}`;
   return h("li", { class: "reference-entry" },
-    h("p", {}, citation, " ", h("a", { href: reference.url, rel: "external noopener" }, reference.doi ?? "Open source record")),
+    h("p", {}, formatCitation(reference), " ", h("a", { href: reference.url, rel: "external noopener" }, reference.url)),
     reference.note ? h("p", { class: "note" }, reference.note) : null
   );
 }

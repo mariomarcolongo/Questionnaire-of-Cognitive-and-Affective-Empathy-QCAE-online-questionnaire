@@ -146,6 +146,7 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
 .reference-list { list-style: none; padding: 0 !important; display: grid; gap: .9rem; }
 .reference-list li { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; }
 .reference-list p { margin: 0; }
+.reference-list a { overflow-wrap: anywhere; }
 .reference-list .note, .note { color: var(--muted); margin-top: .55rem; font-size: .92rem; }
 .candidate-grid { display: grid; gap: 1rem; }
 .candidate-card { border-top: 1px solid var(--border); padding-top: 1.2rem; }
