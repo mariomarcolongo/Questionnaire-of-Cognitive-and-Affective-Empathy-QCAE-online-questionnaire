@@ -1,8 +1,8 @@
 {
   "$schema": "./references.schema.json",
   "id": "qcae-references",
-  "version": "1.0.0",
-  "updated": "2026-07-22",
+  "version": "1.0.1",
+  "updated": "2026-11-02",
   "references": [
     {
       "id": "reniers-2011",
@@ -32,19 +32,17 @@
       "languages": [
         "sr-Latn"
       ],
-      "title": "Questionnaire of Cognitive and Affective Empathy – QCAE",
+      "title": "Questionnaire of Cognitive and Affective Empathy - QCAE",
       "authors": [
-        "Jovan Ivanović",
-        "Aleksandra Lazić",
-        "Ljiljana Lazarević",
-        "Iris Žeželj",
-        "Danka Purić"
+        "Danka Purić",
+        "Nemanja Kidžin"
       ],
       "year": 2020,
       "repository": "OSF / REPOPSI",
       "doi": "10.17605/OSF.IO/MEZ5N",
       "url": "https://doi.org/10.17605/OSF.IO/MEZ5N",
-      "note": "A repository/adaptation record. No peer-reviewed Serbian validation paper was located during the 2026 review; licence metadata should be verified directly from the source record."
+      "license": "CC BY-NC-SA 4.0",
+      "note": "A repository/adaptation record. REPOPSI credits Danka Purić and Nemanja Kidžin as authors of the translation/adaptation (February 2020), states a CC BY-NC-SA 4.0 licence, and asks users to cite the instrument authors. The registered DOI creator is LIRA Lab. No peer-reviewed Serbian validation paper was located during the 2026 review."
     },
     {
       "id": "myszkowski-2017",
@@ -80,8 +78,27 @@
         "Eric Brunet-Gouet",
         "Nils Myszkowski",
         "Mickael Ehrminger",
-        "Paul Roux",
-        "et al."
+        "Mathieu Urbach",
+        "Bruno Aouizerate",
+        "Lore Brunel",
+        "Delphine Capdevielle",
+        "Isabelle Chereau",
+        "Caroline Dubertret",
+        "Julien Dubreucq",
+        "Guillaume Fond",
+        "Christophe Lançon",
+        "Sylvain Leignier",
+        "Jasmina Mallet",
+        "David Misdrahi",
+        "Sylvie Pires",
+        "Priscille Schneider",
+        "Franck Schurhoff",
+        "Hanan Yazbek",
+        "Anna Zinetti-Bertschy",
+        "Nadine Bazin",
+        "Christine Passerieux",
+        "Franck Zenasni",
+        "Paul Roux"
       ],
       "year": 2019,
       "journal": "Frontiers in Psychiatry",
@@ -101,7 +118,7 @@
         "Andreia Queirós",
         "Eugénia Fernandes",
         "Renate Reniers",
-        "Ana Sampaio",
+        "Adriana Sampaio",
         "Joana Coutinho",
         "Ana Seara-Cardoso"
       ],
@@ -141,7 +158,7 @@
       "languages": [
         "de"
       ],
-      "title": "German QCAE research materials associated with self–other distinction research",
+      "title": "When differences matter: rTMS/fMRI reveals how differences in dispositional empathy translate to distinct neural underpinnings of self-other distinction in empathy",
       "authors": [
         "Henryk Bukowski",
         "Claus Lamm",
@@ -151,7 +168,7 @@
       "repository": "OSF",
       "doi": "10.17605/OSF.IO/HFNK5",
       "url": "https://doi.org/10.17605/OSF.IO/HFNK5",
-      "note": "Source of the legacy repository wording; content licence and equivalence to the validated 2024 form remain unresolved."
+      "note": "Source of the legacy repository wording (project file QCAE_Questionnaire_DEUT,ENGL.docx); content licence and equivalence to the validated 2024 form remain unresolved."
     },
     {
       "id": "gica-2021",
@@ -204,13 +221,17 @@
       ],
       "title": "The Questionnaire of Cognitive and Affective Empathy: A Comparison Between Paper-and-Pencil Versus Online Formats in Italian Samples",
       "authors": [
-        "Michele Di Girolamo",
-        "et al."
+        "Marzia Di Girolamo",
+        "Luciano Giromini",
+        "Christina L. Winters",
+        "Colinda M. B. Serie",
+        "Corine de Ruiter"
       ],
       "year": 2019,
       "journal": "Journal of Personality Assessment",
       "volume": "101",
       "issue": "2",
+      "pages": "159–170",
       "doi": "10.1080/00223891.2017.1389745",
       "url": "https://doi.org/10.1080/00223891.2017.1389745"
     },
@@ -263,7 +284,7 @@
       "languages": [
         "ko"
       ],
-      "title": "The validation of the Korean version of Questionnaire of Cognitive and Affective Empathy (K-QCAE)",
+      "title": "The validation of the Korean version of Questionnaire of Cognitive and Affective Empathy",
       "authors": [
         "Minju Kim"
       ],
@@ -281,7 +302,8 @@
     },
     "sr-Latn": {
       "referenceIds": [
-        "ivanovic-2020-osf"
+        "ivanovic-2020-osf",
+        "reniers-2011"
       ]
     },
     "fr": {
@@ -349,14 +371,6 @@
         "lubke-2024"
       ],
       "status": "blocked-needs-validated-item-file-or-supplement"
-    },
-    {
-      "locale": "sr-Latn",
-      "language": "Serbian Latin",
-      "referenceIds": [
-        "ivanovic-2020-osf"
-      ],
-      "status": "active-but-needs-direct-metadata-and-license-verification"
     }
   ]
 }

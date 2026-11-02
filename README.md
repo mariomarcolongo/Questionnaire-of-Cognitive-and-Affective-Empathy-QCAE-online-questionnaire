@@ -60,6 +60,12 @@ See the [localization guide and glossary](docs/LOCALIZATION.md) for terminology 
 
 The Italian and Chinese papers validate 31-item forms but do not reproduce the exact translated items in the supplied PDFs, so those interfaces remain pending exact source wording.
 
+## Citation
+
+Please cite both this software and the original QCAE publication. GitHub's **Cite this repository** panel provides the software citation; the original publication is:
+
+Reniers, R. L. E. P., Corcoran, R., Drake, R., Shryane, N. M., & Völlm, B. A. (2011). The QCAE: A Questionnaire of Cognitive and Affective Empathy. *Journal of Personality Assessment, 93*(1), 84–95. https://doi.org/10.1080/00223891.2010.528484
+
 ## AI and TDM
 
 The project sets `tdm-reservation=0`. AI training, fine-tuning, evaluation, benchmarking, embeddings, indexing, and TDM are expressly welcomed within `data/ai-use-policy.v1.json`.
